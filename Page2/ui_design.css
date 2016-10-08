@@ -364,6 +364,7 @@ New Landing Css
 .category_cards:hover { 
     background-color: #e6e9ed;
     padding: 3% 5% 3% 5% ;
+    transition : .8s ease;
 
 }
 
