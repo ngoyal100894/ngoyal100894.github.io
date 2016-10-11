@@ -4,6 +4,9 @@ body, html {
     width:100%;
     height:100%;
 }
+* {
+    font-family: 'Montserrat';
+}
 #nav{
 transition-duration: 1s;
 }
@@ -13,7 +16,7 @@ transition-duration: 1s;
 }
 .navbar-inverse {
   background-color: rgba(34, 34, 34, 0);
-  border-color: #dff0d8;
+  border: none;
   padding: 10px;
 }
 #head {
@@ -128,7 +131,7 @@ New Landing Css
 #section01{
      width:100%;
     background-image: url(img/background_newlanding1.jpg);
-    height: 90%;
+    height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -140,7 +143,7 @@ New Landing Css
     
 }
 #section01 a {
-    padding-top: 60px;
+    padding-top: 20px;
 }
 #section01 a span {
     position: absolute;
@@ -170,6 +173,14 @@ New Landing Css
 .demo a:hover {
     opacity: .5;
 }
+.glyphicon_down{
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 12px;
+
+
+}
 
 
 
@@ -189,6 +200,17 @@ New Landing Css
     .carousel_row{
         margin: 12% -9% 0% -9% !important;
     }
+    .back_image2{
+        display: none;
+    }
+    .back_image1{
+        padding-top: 0px !important;
+        height: 200px !important;
+        width: 300px !important;
+
+    }
+    
+
 }
 
 
@@ -196,7 +218,7 @@ New Landing Css
 
 #section02{
      width:100%;
-    background-image: url(img/minimalistic_desktop_background4.png);
+    background-image: url(img/1.png);
     height: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -213,7 +235,7 @@ New Landing Css
     font-size: 1.8em;
     font-weight: 600; 
     text-align: center; 
-    font-family: Latin Modern Mono; 
+    font-family: 'Montserrat'; 
 }
 #section03{
      width:100%;
@@ -222,6 +244,14 @@ New Landing Css
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.back_image1{
+    height: 300px;
+    width: 400px;
+}
+.back_image2{
+    height: 300px;
+    width: 400px;
 }
 #section04{
     width:100%;
@@ -243,27 +273,36 @@ New Landing Css
     text-align: center;
     padding-top: 20%;
 }
-.glyphicon.glyphicon-bullhorn {
-    font-size: 3.5em;
+.advertiser_image{
+    height: 40px;
+    width:  65px;
+}
+.advertiser_icon {
+    
     color: #e6e9ed;
     border-radius: 100%;
    
-    padding: 10%;
+    padding: 15% 8%;
     background-color: #2f397c;
 }
-.glyphicon.glyphicon-usd {
-    font-size: 3.5em;
+.publisher_image{
+    height: 40px;
+    width: 55px;
+}
+.publisher_icon {
+    
     color: #e6e9ed;
     border-radius: 100%;
    
-    padding: 10%;
-    background-color: #2f397c;
+    padding: 15% 9% ;
+    background-color: none;
 }
 .section04_subheadings{
     font-size: 1em;
     color: #2f397c;
     text-align: center;
     font-size: 1.3em;
+    padding-top: 40px;
 }
  h3.section04_subheadings::after {
     content: "";
@@ -358,26 +397,18 @@ New Landing Css
     height: 90%; 
     padding: 10% 5% 10% 5% ;
     background-color: white;
-    overflow: hidden;
+    overflow: none;
 
 }
 .category_cards:hover { 
     background-color: #e6e9ed;
-    padding: 3% 5% 3% 5% ;
+    padding: 3% 5% 8% 5% ;
     transition : .8s ease;
 
 }
 
 
-.glyphicon.glyphicon-user {
-    font-size: 3.5em;
-    color: white;
-    border-radius: 100%;
-    border: 4px solid #203e77;
-   
-    padding: 20%;
-    background-color: #2d58a8;
-}
+
 .section05_icon_div{
     text-align: center;
     
@@ -414,6 +445,11 @@ h3.section05_subheadings::after {
 }
 .category_cards:hover h3.section05_subheadings::after{
     display: block;
+}
+@media only screen and (max-device-width: 480px) {
+    #section05{
+        height: 100%;
+    }
 }
 #section06{
     width:100%;
@@ -470,7 +506,7 @@ h3.section05_subheadings::after {
     z-index: 10;
     top: 2%;
     width: 30px; // no more gray thing
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
 }
 .carousel-control.left,
 .carousel-control.right { background: none }
@@ -480,3 +516,49 @@ h3.section05_subheadings::after {
 .padding{
     padding: 0px 5px 0px 5px;
 }
+/**********************************
+How it WOrks css
+************************************/
+
+#benefits_howitworks{
+    padding-top: 30px;
+    padding-bottom: 70px;
+    background-image: url(img/background_how_it_works_section02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+}
+.icon_benefits{
+    padding: 8%;
+    border: solid #0283fc;
+    border-radius: 100%;
+    background-color: white;
+    font-size: 20px;
+    color: #0283fc;
+}
+.icon_div{
+    padding: 19% 8% ;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+}
+ h3.for_dash::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 4px;
+    width: 15%;
+    background-color: white;
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+ }
+ h4.benefits_para{
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+ }
+ .benefits_row{
+    padding-top: 70px;
+ }
