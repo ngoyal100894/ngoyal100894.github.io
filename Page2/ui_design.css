@@ -9,6 +9,7 @@ body, html {
 }
 #nav{
 transition-duration: 1s;
+
 }
 .navbar-brand {
   display: flex;
@@ -18,6 +19,7 @@ transition-duration: 1s;
   background-color: rgba(34, 34, 34, 0);
   border: none;
   padding: 10px;
+  height: 60px;
 }
 #head {
     width:100%;
