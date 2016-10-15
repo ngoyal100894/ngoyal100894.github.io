@@ -5,19 +5,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  
-
-
   <link rel="stylesheet" href="ui_design.css">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300i,400,500,600,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat:400,700" rel="stylesheet">
-  
+  <script src="js/parallax.js-1.4.2/parallax.min.js"></script>
+  <script src="js/parallax.js-1.4.2/parallax.js"></script>
+  <script src="js/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+  <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
 </head>
 <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav id="nav" class="navbar navbar-inverse navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main">
@@ -25,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand"><img src="img/ICW.png" width="50" height="auto" class="img-responsive" id="logo"></a>
+            <a class="navbar-brand"><img src="img/ICW.png" width="40" height="auto" class="img-responsive"></a>
         </div>
         <div class="collapse navbar-collapse" id="main">
             <ul class="nav navbar-nav navbar-right">
@@ -33,48 +34,41 @@
                 <li><a href="#"><b>RESOURCES</b></a></li>
                 <li><a href="#"><b>HOW IT WORKS</b></a></li>
                 <li><a href="#"><b>PUBLISHER</b></a></li>
-                <li><a href="#"><b><span class="glyphicon glyphicon-search"></span></b></a></li>
             </ul>
         </div>
     </div>
     </nav>
-    <section id = "section01" class = "demo">
-      <div class="homepage-hero-module">
-        <div class="video-container">
-            <div class="title-container">
-                <div class="headline">
-                      <h1>Welcome to our Company</h1>
 
-                </div>
-                <div class="description">
-                    <div class="inner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</div>
-                </div>
-            </div>
-            <div class="filter"></div>
-            <video autoplay loop class="fillWidth">
-                <source src="http://dfcb.github.io/BigVideo.js/vids/dock.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.</video>
-            <div class="poster hidden">
-                <img src="http://www.videojs.com/img/poster.jpg" alt="">
-            </div>
-        </div>
+    <div id="head">
+       <div class="background-wrap">
+        <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+          <source src="img/video-1476290332.mp4" type="video/mp4">
+                  <source src="img/video-1476290332.mp4" type="video/ogg">
+          Video not supported
+        </video>          
       </div>
 
-      <a href="#section02" id = "scroll_down"><span class = "glyphicon glyphicon-chevron-down glyphicon_down"></span></a>
-    </section>
+
+      <div class="content">         
+        <h1>Video Background Tutorial</h1>
+        <p>This tutorial shows you how to put video as a background for your website.</p>
+      </div>
+    </div>
+ 
     <section id = "section02" class = "demo">
       <div class = "row">
         <div class = "col-sm-10 col-sm-offset-1 section02_div_text">
-        <p class = "section02_text"> Blip offers this and this and this Blip offers this and this and this Blip offers this and this and this Blip offers this and this and this Blip offers this and this and this</p>
-      </div>
+          <p class = "section02_text"> Blip offers a connected platform of the industry's most active mobile applications for advertisers to uniquely target & instantly reach their consumers anywhere, anytime.</p>
+        </div>
       </div>
       
-      <div class = "row"style = " margin-top: 55px;">
-        <div class = "col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
+      <div class = "row"style = " margin-top: 35px; overflow:hidden;">
+        <div id = "mobile_img" class = "col-xs-8 col-xs-offset-2 col-sm-5 col-sm-offset-0">
           <img src="img/backgroundsection2pic.png" class ="back_image1 img-responsive">
         </div>
         <div class = "col-xs-2 col-sm-2"></div>
-        <div class = "col-sm-5">
-          <img src="img/backgroundsection2pic2.png"class ="back_image2 img-responsive">
+        <div id = "laptop_img" class = "col-sm-5">
+          <img src="img/laptop.png"class ="back_image2 img-responsive">
         </div>
       </div>
 
@@ -84,7 +78,7 @@
 
     <section id = "section04">
       <div class = "col-sm-1"></div>
-      <div class = "col-xs-12 col-sm-4 section04_div">
+      <div id = "advertiser_div" class = "col-xs-12 col-sm-4 section04_div">
         <div class = "section04_icon_div">
           <p><span class="advertiser_icon"><img src="img/4.png"class ="advertiser_image"></span></p>
         </div>
@@ -163,7 +157,7 @@
 
       <div class = "col-sm-2 "></div>
 
-      <div class = "col-xs-12 col-sm-4 section04_div">
+      <div id = "publisher_div" class = "col-xs-12 col-sm-4 section04_div">
         <div class = "section04_icon_div">
           <p><span class="publisher_icon"><img src="img/5.png"class ="publisher_image"></span></p>
         </div>
@@ -270,10 +264,10 @@
         </div>
       </div> 
     </section>
-    <div id="input" class="container-fluid">
+    <div id="input" class="container-fluid"style = "padding-right:0px; padding-left:0px;">
         <div class="row" style="height:100%;">
-            <div class="col-sm-7 text-center" style="color:white;background-image:url(img/redbackground.jpg);height:100%;padding:40px 0 60px 0;">
-                <h2>Connect with us</h2><br>
+            <div class="col-sm-7 text-center" style="color:white;background-image:url(img/contact_bg.png);height:100%;padding:40px 0 60px 0;">
+                <h2 style="font-weight:400;"><b style="font-weight:100;">Connect with us</b></h2><br>
                 <form>
                     <div class="form-group">
                       <div class="col-sm-3 col-sm-offset-2">
@@ -283,12 +277,17 @@
                         <input type="email" class="form-control" id="email" placeholder="E-mail">
                       </div><br><br><br>
                       <div class="col-sm-8 col-sm-offset-2">    
-                        <textarea class="form-control" rows="5" id="comment" placeholder="Message"></textarea>
+                        <textarea class="form-control" rows="5" id="comment" placeholder="Type a message..."></textarea>
                       </div><br><br>
                     </div>
                 </form>
             </div>
-            <div id="map" class="col-sm-5" style="padding:0px;background-color:grey;">
+            <div id="search" class="col-sm-5" style="position:relative;padding:0px;background-color:grey;">
+                <div id="map" style="position:absolute;top:0;left:0;height:100%;width:100%;"></div>
+                <div class="container" style="position:absolute;bottom:0;left:0;height:40%;width:100%;background-color:rgba(43,43,43,0.9);color:white;">
+                    <h4 class="text-center">FIND US HERE</h4>
+                    <p style="font-family:Raleway;font-weight:200;line-height:20px;">Address : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Address : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</</p>
+                </div>
             </div>
             
         </div>
@@ -300,19 +299,19 @@
             <div class="col-sm-7" style="padding-top:20px;padding-bottom:20px;">
                 <div class="col-sm-offset-2">
                     <h2>About us</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h4>
+                    <h5 style="font-family:Raleway;font-weight:300;line-height:20px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
                 </div>
             </div>
             <div class="col-sm-5">
                 <div class="col-sm-offset-2 col-sm-8" style="padding-top:20px;padding-bottom:20px;padding-left:30px;">
                     <h2>Social Media</h2><br>
                     <div class="row">
-                        <div class="social col-sm-2"><img src="img/facebook.png" class="img-responsive" width="300px" style="margin:auto;"/></div>
-                        <div class="social col-sm-2"><img src="img/google+.png" class="img-responsive"  style="margin:auto;"/></div>
-                        <div class="social col-sm-2"><img src="img/utube.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
-                        <div class="social col-sm-2"><img src="img/twitter.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
-                        <div class="social col-sm-2"><img src="img/instagram.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
-                        <div class="social col-sm-2"><img src="img/web.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/facebook.png" class="img-responsive"  style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/google+.png" class="img-responsive"  style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/utube.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/twitter.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/instagram.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
+                        <div class="social col-xs-2"><img src="img/web.png" class="img-responsive" height="auto" style="margin:auto;"/></div>
                     </div>
                 </div>
             </div>
@@ -322,7 +321,8 @@
     <div id="footer"></div>
     
     
-    <script>
+    
+   <script>
         //for google map
         function myMap() {
           var mapCanvas = document.getElementById("map");
@@ -335,136 +335,68 @@
         //for setting height of map
         var x = $("#input").height();
         $(document).ready(function () {
-            $("#map").css({height : x});
+            $("#search").css({height : x});
         });
-
-      $(document).ready(function(){       
-          var scroll_start = 0;
-          var startchange = $('.navbar-inverse');
-          var offset = startchange.offset();
-          if (startchange.length){
-          $(document).scroll(function() { 
-            scroll_start = $(this).scrollTop();
-            if(scroll_start > offset.top) {
-              $(".navbar-inverse").css('background-color', 'rgba(34,34,34,0.9)');
-              $("#logo").attr("src","img/IC.png");
-            } else {
-                  $('.navbar-inverse').css('background-color', 'transparent');
-                  $("#logo").attr("src","img/ICW.png");
-              }
-          });
-          } 
+        
+        //for setting height of video
+        var y = $("#head").height();
+        $(document).ready(function () {
+            $(".background-wrap").css({height : y});
+            $(".content").css({height : y});
         });
+        
+        
+        //for changing color of navbar
+        $(document).ready(function(){       
+       var scroll_start = 0;
+       var startchange = $("#nav");
+       var offset = startchange.offset();
+       $(document).scroll(function() { 
+          scroll_start = $(this).scrollTop();
+          if(scroll_start > offset.top) {
+              $('#nav').css('background-color', 'rgb(255,255,255)');
+              $('.navbar-inverse .navbar-nav>li>a').css('color', 'black');
+              $('#nav img').attr('src','img/IC.png');
+              $('#nav').css('box-shadow', 'inset 0 -2px 0 rgba(0,0,0,.1)');
+           } else {
+              $('#nav').css('background-color', 'transparent');
+              $('.navbar-inverse .navbar-nav>li>a').css('color', 'white');
+              $('#nav img').attr('src','img/ICW.png');
+              $('#nav').css('box-shadow', 'none');
+           }
+           });
+        });
+    
+    //for animations    
+            window.sr = ScrollReveal({ reset: false });
 
-
-
-        $(document).ready(function (){
-            $("#scroll_down").click(function (){
-                $('html, body').animate({
-                    scrollTop: $("#section02").offset().top
-                }, 800);
+            sr.reveal('.bouncingphone', { duration: 1000,origin: 'bottom',distance: '100px',scale: 1 });
+            sr.reveal('#mobile_img', { duration: 1000,origin: 'left',distance: '200px',scale: 1 });
+            sr.reveal('#laptop_img', { duration: 1000,origin: 'right',distance: '200px',scale: 1 });
+            sr.reveal('#lp1,#lp2,#lp3,#lp4', { duration: 2000,scale: 1 });
+            sr.reveal('.social', { duration: 1000,scale: 1 });
+            sr.reveal('#advertiser_div', { duration: 1500,scale: 1 });
+            sr.reveal('#publisher_div', { duration: 1500,scale: 1 });
+            sr.reveal('.category_cards', { duration: 2000,scale: 1 });
+            sr.reveal('#mobileAds .row', { duration: 1000,scale: 1 });
+        
+    //number updating animation
+            jQuery(document).ready(function( $ ) {
+            $('#reach span').counterUp({
+            delay: 10, // the delay time in ms
+            time: 1000 // the speed time in ms
             });
-        });
+            });
+       
+
+        </script>
 
 
-        /** Document Ready Functions **/
-/********************************************************************/
 
-$( document ).ready(function() {
 
-    // Resive video
-    scaleVideoContainer();
-
-    initBannerVideoSize('.video-container .poster img');
-    initBannerVideoSize('.video-container .filter');
-    initBannerVideoSize('.video-container video');
-        
-    $(window).on('resize', function() {
-        scaleVideoContainer();
-        scaleBannerVideoSize('.video-container .poster img');
-        scaleBannerVideoSize('.video-container .filter');
-        scaleBannerVideoSize('.video-container video');
-    });
-
-});
-
-/** Reusable Functions **/
-/********************************************************************/
-
-function scaleVideoContainer() {
-
-    var height = $(window).height();
-    var unitHeight = parseInt(height) + 'px';
-    $('.homepage-hero-module').css('height',unitHeight);
-
-}
-
-function initBannerVideoSize(element){
-    
-    $(element).each(function(){
-        $(this).data('height', $(this).height());
-        $(this).data('width', $(this).width());
-    });
-
-    scaleBannerVideoSize(element);
-
-}
-
-function scaleBannerVideoSize(element){
-
-    var windowWidth = $(window).width(),
-        windowHeight = $(window).height(),
-        videoWidth,
-        videoHeight;
-    
-    console.log(windowHeight);
-
-    $(element).each(function(){
-        var videoAspectRatio = $(this).data('height')/$(this).data('width'),
-            windowAspectRatio = windowHeight/windowWidth;
-
-        if (videoAspectRatio > windowAspectRatio) {
-            videoWidth = windowWidth;
-            videoHeight = videoWidth * videoAspectRatio;
-            $(this).css({'top' : -(videoHeight - windowHeight) / 2 + 'px', 'margin-left' : 0});
-        } else {
-            videoHeight = windowHeight;
-            videoWidth = videoHeight / videoAspectRatio;
-            $(this).css({'margin-top' : 0, 'margin-left' : -(videoWidth - windowWidth) / 2 + 'px'});
-        }
-
-        $(this).width(videoWidth).height(videoHeight);
-
-        $('.homepage-hero-module .video-container video').addClass('fadeIn animated');
-        
-
-    });
-}
-    
-    </script>
-
-<!-- <script >
-    
-      $('.carousel[data-type="multi"] .item').each(function(){
-     var next = $(this).next();
-      if (!next.length) {
-      next = $(this).siblings(':first');
-      }
-    next.children(':first-child').clone().appendTo($(this));
-    
-    for (var i=0;i<2;i++) {
-      next=next.next();
-      if (!next.length) {
-        next = $(this).siblings(':first');
-      }
-      
-      next.children(':first-child').clone().appendTo($(this));
-    }
-  });
-  </script>
--->
-  
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    <script src="js/Animating-Numbers-Counting-Up-with-jQuery-Counter-Up-Plugin/jquery.counterup.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   </body>
 
   </html>
