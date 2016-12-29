@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kshitij</title>
+</head>
+<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/script.js"></script>
+<body>
+	<footer>
+		<div class="container" style="min-height: 60px;padding-left: 120px;padding-right: 120px;">
+			<div class ="row">
+				<div class = "col-md-3">
+
+					<div class ="row">
+						<img src="img/random_logo.png" height="60" width="60" style="">
+					</div>
+					<div class ="row">
+						<p style="margin:0px;">Cultural Council</p>
+					</div>
+					<div class ="row">
+						<p style="margin:0px;">MAC, IIT ROORKEE</p>
+					</div>
+					<br>
+					<div class ="row">
+						<p style="margin:0px;">sdjbsjdbladbva@gmail.com</p>
+					</div>
+					<div class ="row">
+						<p style="margin:0px;">94142934894</p>
+					</div>					
+
+				</div>
+				<div class = "col-md-6">
+					<div class="row">
+						<br>
+						<p class="text-center"style="font-size:1.2em;">Seek Us</p>
+					</div>
+					<div class="row">
+						<div class = "col-md-4"></div>
+						<div class = "col-md-4">
+							    <ul class="social-network social-circle">
+								    <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+								    <li><a href="#" class="icoLocation" title="Location"><i class="fa fa-map-marker"></i></a></li>
+								    <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+								    
+							    </ul>
+						</div>
+						<div class = "col-md-4"></div>
+					</div>
+
+				</div>
+				<div class = "col-md-3">
+
+					<form action="#" method ="post"name="ContactForm" class="form contact_us"id="footer_form" onsubmit="return validateForm();">
+					  	
+					  	<input id="userFullName" name="Name"  placeholder="Name"></input>
+					  	
+					  	<input id="userPhoneNo" name="Phone Number" placeholder="Phone"></input>
+					  	
+					  	<input id="userEmailId" name="Email Id"  placeholder="Email ID"></input>
+
+					  	<input id="userMessage" name="User Message" placeholder="Message"></input>
+					  	
+					  	<button type ="submit" form = "footer_form">SUBMIT</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</footer>
+<script type="text/javascript">
+	function validateForm() {
+
+		  for (var i = 0; i <= 3; i++) {
+		    boxElement = document.ContactForm.elements[i];
+		    if (!boxElement.value) {
+		      alert('You have not filled the ' + boxElement.name + '!');
+		      boxElement.focus();
+		      return false;
+
+		    }
+
+		  }
+
+		  characterInput = document.getElementById("userFullName");
+		  var characterInputFormat = /^([a-zA-Z]+\s)*[a-zA-Z]+$/;
+		  if (!characterInput.value.match(characterInputFormat)) {
+		    alert('Please fill characters only');
+		    characterInput.focus();
+		    return false;
+
+		  }
+
+		  emailId = document.getElementById("userEmailId");
+		  var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+		  if (!emailId.value.match(emailFormat)) {
+		    alert("Not a valid e-mail address");
+		    emailId.focus();
+		    return false;
+		  }
+
+		  phoneNumber = document.getElementById("userPhoneNo");
+		  var phoneNumberFormat = /[((\+*)((0[ -]+)*|(91 )*)(\d{12}+|\d{10}+))|\d{5}([- ]*)\d{6}/;
+
+		  if (!phoneNumber.value.match(phoneNumberFormat)) {
+		    alert("Please enter valid phone number");
+		    emailId.focus();
+		    return false;
+
+		  }
+
+		  return true;
+
+		}
+</script>
+	
+</body>
+</html>
