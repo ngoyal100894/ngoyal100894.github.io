@@ -25,8 +25,38 @@
 .paragraph_articles p{
   padding: 0% 5%;
 }
+.gen_heading{
+  font-family: "Lato Medium";
+}
+::-webkit-input-placeholder { /* Chrome */
+  font-size: 15px;
+  font-family: "Lato Regular";
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 15px;
+  font-family: "Lato Regular";
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 15px;
+  font-family: "Lato Regular";
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+ font-family: "Lato Regular";
+ font-size: 15px;
+}
 footer{
-  margin-top: 30px;
+  margin-top: 60px;
+}
+footer>div>div>div.col-md-3 div{
+  font-size: 18px;
+  font-family: "LinLibertine_R Regular";
+}
+footer>div>div>div.col-md-6 p{
+  font-size: 20px;
+  font-family: "LinLibertine_R Regular";
+}
+footer>div>div>div:nth-child(3){
+  padding: 0!important;
 }
  body{
   overflow-x: hidden;
@@ -62,8 +92,9 @@ footer{
   text-transform: uppercase;
   text-align: center;
   /*height: 70px;*/
-  font-size: 16px;
+  font-size: 18px;
   color: #212121;
+  margin-bottom: 40px;
  }
  nav ul li {
 
@@ -76,7 +107,7 @@ footer{
 #head{
     position: relative;
     width:100%;
-    height: 90%;
+    height: 100%;
     background-image: url(img/foggy-read.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -96,9 +127,16 @@ footer{
  .header.navbar-default{
 	background-color: transparent;
 	border: none;
+
+}
+.header.navbar-default > div > ul a{
+  color: white;
+}
+.header.navbar-default ul.navbar-nav{
+  font-size: 16.5px;
 }
  .header.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    color: #555;
+    color: white;
     background-color: transparent;
 }
 .header .navbar-nav>li {
@@ -124,8 +162,10 @@ footer{
 }
 /**************************************************************************************/
 .header_heading{
-	font-size: 2.5em;
-	font-family: sans-serif;
+	font-size: 2.15em;
+  letter-spacing: .13em;
+  line-height: 1.5em;
+	font-family:"Lato Regular";
 	text-align: center;
 	color: white;
 }
@@ -135,6 +175,11 @@ footer{
     display:flex;
     align-items:center;
     text-align: justify;
+}
+.header_container .carousel-inner p{
+  font-size: 15px;
+  font-family: "LinLibertine_R Regular";
+  text-align: center;
 }
 
 #text-carousel {
@@ -165,6 +210,8 @@ footer{
 }
 .main_event_div button{
 	border-radius: 30px;
+  font-size: 11px;
+  font-family: "Lato Thin";
 }
 .header-main_button{
 	display: block;
@@ -176,7 +223,7 @@ footer{
 }
 /*********************************************************************************/
  .header-list{
- 	background-color: #efefef;
+ 	background-color: #f9f9f9;
  }
  .header-list a:hover{
  	color: black;
@@ -206,10 +253,10 @@ footer{
 	}
 .card-author{
 	color: #a1a1a1;
-	font-family: "LinLibertine_R";
+	font-family: "LinLibertine_R Regular";
 }
 .card-heading{
-	font-family: "LinLibertine_R"
+	font-family: "LinLibertine_R Regular"
 }
 .card-category{
 	color: #a1a1a1;
@@ -304,12 +351,12 @@ footer{
   background: #d8d5d5;
 }
 .content{
-  font-family: Lato Medium;
+  font-family: "Lato Medium";
 }
 /***********************************************************************************/
 /**************************FOOTER CSS*********************************************/
 footer{
-  background-color: #efefef;
+  background-color: #f9f9f9;
   min-height: 200px;
       padding-top: 15px;
 }
@@ -346,7 +393,7 @@ a.socialIcon:hover, .socialHoverClass {
 }
 .social-circle li a {
     color: #333;
-    background-color: #efefef;
+    background-color: #f9f9f9;
     display:inline-block;
     position:relative;
     margin:0 auto 0 auto;
